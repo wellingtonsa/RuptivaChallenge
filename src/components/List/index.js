@@ -6,7 +6,7 @@ import {
     RefreshControl
   } from 'react-native';
 
-  export default function List() {
+  export default function List(props) {
     
     const  db = firebase.firestore().collection('users');
 
@@ -15,10 +15,9 @@ import {
 
       useEffect(() => {
         loadUsers();
-      }, []);
+      }, [props.opacity]);
 
       function loadUsers(){
-
         db.onSnapshot(querySnapshot => {
           let newUser = [];
           querySnapshot.forEach((doc) => {
@@ -42,7 +41,6 @@ import {
 
 
     function renderUsers({ item }){  
-        console.log(users);
         return (
           <Item>
             <Data>
@@ -55,8 +53,7 @@ import {
     };
 
     return(
-      <Container>
-        
+      <Container opacity={props.opacity}>
         <FlatList
           refreshControl={
             <RefreshControl

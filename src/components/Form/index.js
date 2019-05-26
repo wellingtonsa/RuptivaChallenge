@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
 import { RadioButton } from 'react-native-paper';
-import InputMask from 'react-native-input-mask';
 import { Formik } from 'formik';
 import firebase from 'react-native-firebase';
 
@@ -20,8 +19,7 @@ import {
   LoadingContainer } from './styles';
 
 
-export default function Main() {
-
+export default function Main(props) {
     const [ type, setTypes ] = useState('individual');
     const  db = firebase.firestore().collection('users');
 
@@ -38,15 +36,17 @@ export default function Main() {
       });
 
     async function _onSubmit(values, actions){
+
       await db.add({
         ...values, type
       });
-
       actions.setSubmitting(false);
+      props.showList();
     }
 
+
     return (
-        <Container>
+        <Container positionY={props.positionY}>
         <Formik onSubmit={_onSubmit} validationSchema={validationSchema}>
           {formikProps => (
             <>

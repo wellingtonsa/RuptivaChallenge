@@ -5,7 +5,8 @@ export const Container = styled.View`
     padding: 2px;
     border-radius: 5px;
     border: 1px solid #DDD;
-    background: #FFF
+    background: #FFF;
+    opacity: ${props => { return ( props.opacity )}};
 `;
 
 export const Item = styled.View`

@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
+      position: absolute;
+      top: ${props => { return ( props.positionY )}};
+      left: 0;
+      right: 0;
       margin-top: 40%;
       margin-left: 5%;
       margin-right: 5%;
