@@ -1,0 +1,3 @@
+rootProject.name = 'RuptivaChallenge'
+
+include ':app'
