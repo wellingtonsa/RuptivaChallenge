@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "540833968584",
+    "firebase_url": "https://ruptivachallenge.firebaseio.com",
+    "project_id": "ruptivachallenge",
+    "storage_bucket": "ruptivachallenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540833968584:android:615bdc394d02a4d3",
+        "android_client_info": {
+          "package_name": "com.ruptivachallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540833968584-2m9vtdp7c5l80e9f9hua9rqv68u92d7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ruptivachallenge",
+            "certificate_hash": "4b6d89d41829b446ae8e97e608f836fc063d9c96"
+          }
+        },
+        {
+          "client_id": "540833968584-01mu6n9eb145meber2783cusgj5c8rge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGF2Spm6lswidd5rgIHn6rVg5J1yd6-qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540833968584-01mu6n9eb145meber2783cusgj5c8rge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
