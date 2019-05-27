@@ -1,27 +1,34 @@
 import firebase from 'react-native-firebase';
 
 let db;
+let users = [];
 
 export function init(){
     db = firebase.firestore().collection('users');
+
+      
+   return db.onSnapshot(querySnapshot => {
+    users = [];
+    querySnapshot.forEach((doc) => {
+      
+      users.push({
+        ...doc.data(),
+        id: doc.id
+      });
+    });
+    });
 }
+
 
 export function add(doc){
     db.add(doc);
 }
 
 export function get(){
-    let users = [];
-    db.onSnapshot(querySnapshot => {
-        querySnapshot.forEach((doc) => {
+  console.log(users);
+  return users;
+}
 
-          const { _data } = doc;
-
-          users.push({
-            ..._data
-          });
-        });
-    });
-
-    return users;
+export function _delete(item){
+   db.doc(item.id).delete();
 }

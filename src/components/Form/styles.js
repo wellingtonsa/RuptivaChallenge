@@ -1,8 +1,9 @@
+import { Animated } from 'react-native';
 import styled from 'styled-components/native';
 
-export const Container = styled.SafeAreaView`
+export const Container = styled(Animated.View)`
       position: absolute;
-      top: ${props => { return ( props.positionY )}};
+      top: 0;
       left: 0;
       right: 0;
       margin-top: 40%;

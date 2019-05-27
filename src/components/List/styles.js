@@ -1,12 +1,13 @@
+import { Animated } from 'react-native';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled(Animated.View)`
     margin: 15px;
     padding: 2px;
     border-radius: 5px;
     border: 1px solid #DDD;
     background: #FFF;
-    opacity: ${props => { return ( props.opacity )}};
+    opacity: 0;
 `;
 
 export const Item = styled.View`
@@ -19,7 +20,7 @@ export const Item = styled.View`
     justify-content: space-between;
 `;
 
-export const Data = styled.View`
+export const Data = styled.TouchableOpacity`
     display: flex;
     flex-direction: column;
 

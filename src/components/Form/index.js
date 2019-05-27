@@ -19,6 +19,7 @@ import {
   LoadingContainer } from './styles';
 
 
+
 export default function Main(props) {
     const [ type, setTypes ] = useState('individual');
 
@@ -37,13 +38,17 @@ export default function Main(props) {
 
     async function _onSubmit(values, actions){
 
-      await add({...values, type})
+      await add({...values, type});
       actions.setSubmitting(false);
       props.showList();
     }
 
     return (
-        <Container positionY={props.positionY}>
+        <Container 
+        style={{
+          top: props.positionY
+        }}
+        >
         <Formik onSubmit={_onSubmit} validationSchema={validationSchema}>
           {formikProps => (
             <>

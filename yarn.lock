@@ -5153,11 +5153,6 @@ react-native-firebase@^5.3.1:
     opencollective-postinstall "^2.0.0"
     prop-types "^15.6.2"
 
-react-native-input-mask@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-input-mask/-/react-native-input-mask-1.0.0.tgz#b320abcc88cdc64dca8ef02f7912bef92ee26b3e"
-  integrity sha1-syCrzIjNxk3KjvAveRK++S7iaz4=
-
 react-native-paper@^2.15.2:
   version "2.15.2"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.15.2.tgz#c1a529cd5a11cfdb20746e0eec87343c0fbc4e66"
@@ -5176,6 +5171,11 @@ react-native-safe-area-view@^0.12.0:
   integrity sha512-UrAXmBC4KNR5K2eczIDZgqceWyKsgG9gmWFerHCvoyApfei8ceBB9u/c//PWCpS5Gt8MRLTmX5jPtzdXo2yNqg==
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-text-input-mask@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-text-input-mask/-/react-native-text-input-mask-1.0.1.tgz#93b4374c3c73bc78eac907094662d5d98166f359"
+  integrity sha512-gN0N+3tpw1kgHsuaqzugN7hc5XsjlyXET4/Q3C36F6LxwpIdnf3k9yCL4vfAlw6QxwuBTtyFaRxGJgwZkzk4Ng==
 
 react-native-vector-icons@^6.4.2:
   version "6.4.2"
