@@ -10,6 +10,15 @@ export const Container = styled(Animated.View)`
     opacity: 0;
 `;
 
+
+export const Header = styled.Text`
+    background: #FFF;
+    font-size: 24px;
+    align-content: center;
+    text-align: center;
+    padding: 4px;
+`;
+
 export const Item = styled.View`
     display: flex;
     flex-direction: row;

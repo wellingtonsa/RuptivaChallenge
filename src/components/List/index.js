@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { init, get, _delete } from '../../services/firebase';
-import { Container, Item, Name, Document, Type, Data } from './styles';
+import { Container, Header, Item, Name, Document, Type, Data } from './styles';
 import {
     Alert,
     FlatList,
@@ -25,7 +25,7 @@ import {
       async function confirmDeletion(item){
         Alert.alert(
           'Deletar usuário',
-          `Deseja deletar o usuário ${item.name}`,
+          `Deseja deletar o usuário ${item.name}?`,
           [
             {
               text: 'Sim', onPress: () => deleteUser(item)
@@ -72,6 +72,7 @@ import {
       <Container style={
         { opacity: props.opacity }
       }>
+        <Header>Usuários</Header>
         <FlatList
           refreshControl={
             <RefreshControl

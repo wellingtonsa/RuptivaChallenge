@@ -29,11 +29,11 @@ export default function Main(props) {
         name: yup
           .string()
           .required()
-          .label('Name'),
+          .label('Nome'),
         document: yup
           .number()
           .required()
-          .label('Document'),
+          .label('Identidade'),
       });
 
     async function _onSubmit(values, actions){
@@ -58,7 +58,7 @@ export default function Main(props) {
                         value="individual"
                         status={type === 'individual' ? 'checked' : 'unchecked'}
                         onPress={() => setTypes('individual')}/>
-                        <Text>Individual</Text>
+                        <Text>Pessoa Física</Text>
                     </TypeOption>
 
                     <TypeOption >
@@ -66,14 +66,14 @@ export default function Main(props) {
                         value="business"
                         status={type === 'business' ? 'checked' : 'unchecked'}
                         onPress={() => setTypes('business')}/>
-                        <Text>Business</Text>
+                        <Text>Pessoa Jurídica</Text>
                     </TypeOption>
                 </TypeContainer>
               <TextInput
                 onChangeText={formikProps.handleChange('name')}
                 placeholder={type === 'individual'
-                    ? 'Name (Individual)'
-                    : 'Name (Business)'
+                    ? 'Nome (Pessoa Fisica)'
+                    : 'Razão Social (Pessoa Jurídica)'
                 }
                 editable={!formikProps.isSubmitting}
               />
@@ -82,7 +82,7 @@ export default function Main(props) {
               <TextInput
                 keyboardType="numeric"
                 onChangeText={formikProps.handleChange('document')}
-                placeholder={type === 'individual' ? 'Document (CPF)' : 'Document (CNPJ)'}
+                placeholder={type === 'individual' ? 'Identidade (CPF)' : 'Identidade (CNPJ)'}
                 editable={!formikProps.isSubmitting}
               />
               <ErrorMessage> { formikProps.errors.document } </ErrorMessage>
@@ -93,7 +93,7 @@ export default function Main(props) {
                     <Text>Enviando...</Text>
                 </LoadingContainer>
               ) : (
-                <Button title="Submit" onPress={formikProps.handleSubmit} />
+                <Button title="Enviar" onPress={formikProps.handleSubmit} />
               )}
             </>
           )}
