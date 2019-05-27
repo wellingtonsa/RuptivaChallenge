@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
 import { RadioButton } from 'react-native-paper';
 import { Formik } from 'formik';
-import firebase from 'react-native-firebase';
+import { init, add } from '../../services/firebase';
 
 import {
     Text,
@@ -21,8 +21,8 @@ import {
 
 export default function Main(props) {
     const [ type, setTypes ] = useState('individual');
-    const  db = firebase.firestore().collection('users');
 
+    useEffect(() => init() , []);
 
     const validationSchema = yup.object().shape({
         name: yup
@@ -37,13 +37,10 @@ export default function Main(props) {
 
     async function _onSubmit(values, actions){
 
-      await db.add({
-        ...values, type
-      });
+      await add({...values, type})
       actions.setSubmitting(false);
       props.showList();
     }
-
 
     return (
         <Container positionY={props.positionY}>

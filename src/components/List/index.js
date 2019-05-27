@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import firebase from 'react-native-firebase';
+import { init, get } from '../../services/firebase';
 import { Container, Item, Name, Document, Type, Data } from './styles';
 import {
     FlatList,
@@ -14,23 +14,13 @@ import {
     const [users, setUsers] = useState([])
 
       useEffect(() => {
+        init();
         loadUsers();
       }, [props.opacity]);
+      
 
       function loadUsers(){
-        db.onSnapshot(querySnapshot => {
-          let newUser = [];
-          querySnapshot.forEach((doc) => {
-
-            const { _data } = doc;
-
-            newUser.push({
-              ..._data
-            });
-
-          });
-          setUsers(newUser);
-        })
+          setUsers(get());
       }
 
       async function _onRefresh(){
