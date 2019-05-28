@@ -25,7 +25,7 @@ O processo consistiu em duas partes principais, a criação das telas e componen
 
 <Image src='https://i.imgur.com/ROpxEPD.png'>
 <Image src='https://i.imgur.com/0kKKX7t.png'>
-![GIF de demostracao](https://i.imgur.com/m9IsNPT.gif)
+<Image src='https://i.imgur.com/m9IsNPT.gif'>
 
 
 ## Dificuldades e problemas encontrados
